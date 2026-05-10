@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
-import { navItems, siteConfig } from "@/data/site";
+import { siteConfig } from "@/data/site";
 
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
-      <div className="container grid gap-8 py-10 md:grid-cols-[1.5fr_1fr_1fr]">
+      <div className="container grid gap-8 py-10 md:grid-cols-[1.5fr_1fr]">
         <div>
           <div className="mb-3 flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-md bg-slate-900 text-sm font-bold text-white">
@@ -21,17 +21,6 @@ export function Footer() {
             Research in generative AI, medical imaging, digital image processing, smart sensing, IoT,
             machine learning, and deep learning.
           </p>
-        </div>
-
-        <div>
-          <h2 className="mb-3 text-sm font-semibold text-slate-950">Navigate</h2>
-          <div className="grid gap-2">
-            {navItems.slice(1).map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm text-slate-600 hover:text-slate-950">
-                {item.label}
-              </Link>
-            ))}
-          </div>
         </div>
 
         <div>
