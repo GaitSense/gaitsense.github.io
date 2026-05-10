@@ -13,7 +13,7 @@ export default function ProjectsPage() {
         <SectionHeading
           eyebrow="Projects"
           title="Lab projects"
-          description="Browse current, completed, and exploratory projects. Placeholder descriptions and links are marked in /data/projects.ts for easy replacement."
+          description="Browse current, completed, student, and placeholder project entries. Cards link to detail pages with galleries, videos, links, and related publication placeholders."
         />
         <div className="mt-10">
           <ProjectsFilter projects={projects} />

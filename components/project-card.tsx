@@ -5,12 +5,15 @@ import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Project } from "@/data/projects";
+import { getProjectStatusBadges } from "@/lib/project-utils";
 
 type ProjectCardProps = {
   project: Project;
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const statusBadges = getProjectStatusBadges(project);
+
   return (
     <Link href={`/projects/${project.slug}`} className="group block h-full">
       <Card className="h-full overflow-hidden transition hover:-translate-y-1 hover:shadow-soft">
@@ -20,7 +23,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <CardHeader className="gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary">{project.category}</Badge>
-            <Badge variant="outline">{project.status}</Badge>
+            {statusBadges.slice(0, 2).map((badge) => (
+              <Badge key={badge} variant="outline">
+                {badge}
+              </Badge>
+            ))}
           </div>
           <CardTitle className="leading-7">{project.title}</CardTitle>
         </CardHeader>

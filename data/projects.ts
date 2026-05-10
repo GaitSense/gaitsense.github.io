@@ -15,8 +15,18 @@ export type Project = {
   summary: string;
   description: string;
   image: string;
-  status: "Active" | "Completed" | "Exploratory";
+  status: "Active" | "Completed" | "Exploratory" | "Funded" | "Student Project" | "Placeholder";
+  // TODO: Add specific badges such as "Funded", "Student Project", or "Industry Collaboration" when confirmed.
+  statusBadges?: Array<"Active" | "Completed" | "Exploratory" | "Funded" | "Student Project" | "Placeholder">;
   tags: string[];
+  // TODO: Replace placeholder gallery images with screenshots, result figures, demo frames, or field photos.
+  gallery?: string[];
+  // TODO: Add related publication records when a project maps to a paper.
+  relatedPublications?: Array<{
+    title: string;
+    year?: number;
+    url?: string;
+  }>;
   // TODO: Replace placeholder links with real code, demo, paper, and video URLs when available.
   links: {
     github?: string;
