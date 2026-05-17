@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, Github, ImageIcon, PlayCircle } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, PlayCircle } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -37,9 +37,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   const gallery = getProjectGallery(project);
   const statusBadges = getProjectStatusBadges(project);
   const links = [
-    { label: "GitHub", href: project.links.github, icon: Github, placeholder: "GitHub repository placeholder" },
-    { label: "Demo", href: project.links.demo, icon: ExternalLink, placeholder: "Demo link placeholder" },
-    { label: "Paper", href: project.links.paper, icon: ExternalLink, placeholder: "Paper link placeholder" }
+    { label: "GitHub", href: project.links.github, icon: Github, unavailable: "Private repository" },
+    { label: "Demo", href: project.links.demo, icon: ExternalLink, unavailable: "Demo not available" },
+    { label: "Paper", href: project.links.paper, icon: ExternalLink, unavailable: "Paper not available" }
   ];
 
   return (
@@ -72,7 +72,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
             <section className="mt-10">
               <h2 className="text-2xl font-bold text-slate-950">Overview</h2>
-              <p className="mt-4 leading-7 text-slate-600">{project.description}</p>
+              <div className="mt-4 space-y-4 leading-7 text-slate-600">
+                {project.description.split("\n\n").map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </section>
 
             <section className="mt-10">
@@ -92,15 +96,6 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                     />
                   </div>
                 ))}
-                <div className="flex aspect-[16/10] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white p-6 text-center">
-                  <div>
-                    <ImageIcon className="mx-auto h-8 w-8 text-cyan-700" />
-                    <p className="mt-3 text-sm font-semibold text-slate-950">Gallery placeholder</p>
-                    <p className="mt-1 text-xs leading-5 text-slate-500">
-                      Add result figures, screenshots, dataset samples, or demo frames in /data/projects.ts.
-                    </p>
-                  </div>
-                </div>
               </div>
             </section>
 
@@ -111,9 +106,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                   <CardContent className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="font-semibold text-slate-950">Project video or demo recording</p>
-                      <p className="mt-1 text-sm text-slate-500">
-                        This placeholder can later be replaced with an embedded video player.
-                      </p>
+                      <p className="mt-1 text-sm text-slate-500">Supplementary video material is available.</p>
                     </div>
                     <Button asChild>
                       <Link href={project.links.video}>
@@ -127,9 +120,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 <div className="mt-5 flex min-h-48 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white p-6 text-center">
                   <div>
                     <PlayCircle className="mx-auto h-9 w-9 text-cyan-700" />
-                    <p className="mt-3 font-semibold text-slate-950">Video placeholder</p>
+                    <p className="mt-3 font-semibold text-slate-950">Video not available</p>
                     <p className="mt-1 max-w-md text-sm leading-6 text-slate-500">
-                      Add a demo video, presentation recording, or embedded media link when available.
+                      No public demo video or presentation recording is currently available for this project.
                     </p>
                   </div>
                 </div>
@@ -158,10 +151,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 ) : (
                   <Card>
                     <CardContent className="p-5">
-                      <p className="font-semibold text-slate-950">Related publication placeholder</p>
+                      <p className="font-semibold text-slate-950">No related publications listed</p>
                       <p className="mt-2 text-sm leading-6 text-slate-500">
-                        Add paper titles, DOI links, PDFs, or citation metadata when this project is connected to a
-                        publication.
+                        Related papers will appear here when they are publicly available.
                       </p>
                     </CardContent>
                   </Card>
@@ -199,6 +191,36 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                       ))}
                     </dd>
                   </div>
+                  {project.contributors?.length ? (
+                    <div>
+                      <dt className="font-medium text-slate-500">Contributors</dt>
+                      <dd className="mt-1 leading-6 text-slate-950">{project.contributors.join(", ")}</dd>
+                    </div>
+                  ) : null}
+                  {project.technologies?.length ? (
+                    <div>
+                      <dt className="font-medium text-slate-500">Stack / technologies</dt>
+                      <dd className="mt-2 flex flex-wrap gap-2">
+                        {project.technologies.map((technology) => (
+                          <Badge key={technology} variant="indigo">
+                            {technology}
+                          </Badge>
+                        ))}
+                      </dd>
+                    </div>
+                  ) : null}
+                  {project.datasets?.length ? (
+                    <div>
+                      <dt className="font-medium text-slate-500">Data</dt>
+                      <dd className="mt-2 flex flex-wrap gap-2">
+                        {project.datasets.map((dataset) => (
+                          <Badge key={dataset} variant="outline">
+                            {dataset}
+                          </Badge>
+                        ))}
+                      </dd>
+                    </div>
+                  ) : null}
                 </dl>
               </CardContent>
             </Card>
@@ -222,14 +244,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                         className="flex items-center gap-2 rounded-md border border-dashed border-slate-300 px-4 py-2 text-sm font-medium text-slate-500"
                       >
                         <Icon className="h-4 w-4" />
-                        {link.placeholder}
+                        {link.unavailable}
                       </div>
                     );
                   })}
                 </div>
-                <p className="mt-4 text-xs leading-5 text-slate-500">
-                  Placeholder links should be replaced in /data/projects.ts when project assets are ready.
-                </p>
               </CardContent>
             </Card>
           </aside>

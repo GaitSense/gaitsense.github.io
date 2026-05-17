@@ -21,10 +21,12 @@ export default function HomePage() {
       [
         "medical-image-augmentation-gan",
         "automated-cobb-angle-estimation",
-        "occupancy-detection-thermal-sensors"
+        "occupancy-detection-thermal-sensors",
+        "retrieval-augmented-fashion-captioning-hashtag-generation"
       ].includes(project.slug)
     )
     .slice(0, 3);
+  const projectHighlights = featuredProjects.length ? featuredProjects : projects.slice(0, 3);
   return (
     <>
       <HomeHero />
@@ -111,7 +113,7 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project) => (
+            {projectHighlights.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
