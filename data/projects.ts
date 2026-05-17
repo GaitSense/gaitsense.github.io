@@ -72,5 +72,50 @@ export const projects: Project[] = [
     links: {
       paper: "https://arxiv.org/abs/2511.19149"
     }
+  },
+  {
+    title: "Interpretable PM2.5 Forecasting",
+    slug: "interpretable-pm25-forecasting",
+    category: "Time Series Analysis",
+    summary:
+      "A comparative study of lightweight and interpretable operational time-series models for hourly PM2.5 forecasting in Beijing.",
+    description:
+      "This project investigates whether lightweight and interpretable forecasting approaches can provide competitive performance for short-term urban air-quality prediction. The study focuses on hourly PM2.5 forecasting in Beijing, China, using multi-year pollutant and meteorological time-series data.\n\nThe workflow is designed to avoid data leakage and includes chronological data partitioning, preprocessing, feature selection, and exogenous-driver modeling under the Perfect Prognosis setting. Three forecasting families are evaluated: SARIMAX, Facebook Prophet, and NeuralProphet.\n\nTo assess practical deployment behavior, the models are tested under weekly walk-forward refitting and frozen forecasting with online residual correction. Results show that Facebook Prophet performs strongly under walk-forward refitting, while corrected SARIMAX achieves the lowest overall error in the frozen-model regime. The findings suggest that lightweight additive forecasting strategies can offer a practical balance between accuracy, interpretability, and computational efficiency for real-world air-quality deployment.",
+    image: "/images/projects/pm25-forecasting.png",
+    status: "Preprint",
+    statusBadges: ["Submitted", "Preprint", "Student Project"],
+    tags: [
+      "PM2.5 Forecasting",
+      "Air Quality",
+      "Time Series",
+      "SARIMAX",
+      "Prophet",
+      "NeuralProphet",
+      "Residual Correction"
+    ],
+    contributors: ["Moazzam Umer Gondal", "Hamad ul Qudous", "Asma Ahmad Farhan", "Sultan Alamri"],
+    datasets: ["Multi-year pollutant and meteorological time-series data for Beijing, China"],
+    technologies: [
+      "Python",
+      "SARIMAX",
+      "Facebook Prophet",
+      "NeuralProphet",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Time-series cross-validation"
+    ],
+    relatedPublications: [
+      {
+        title:
+          "Interpretable PM2.5 Forecasting for Urban Air Quality: A Comparative Study of Operational Time-Series Models",
+        year: 2026,
+        url: "https://arxiv.org/abs/2603.25495"
+      }
+    ],
+    links: {
+      github: "https://github.com/moazzamumer/Adaptive-Air-Quality-Forcasting",
+      paper: "https://arxiv.org/abs/2603.25495"
+    }
   }
 ];
