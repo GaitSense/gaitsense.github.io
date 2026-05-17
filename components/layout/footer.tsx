@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 import { siteConfig } from "@/data/site";
@@ -9,8 +10,8 @@ export function Footer() {
       <div className="container grid gap-8 py-10 md:grid-cols-[1.5fr_1fr]">
         <div>
           <div className="mb-3 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-slate-900 text-sm font-bold text-white">
-              GA
+            <span className="relative h-10 w-10 overflow-hidden rounded-md bg-white ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-800">
+              <Image src="/images/lab-logo.png" alt="GAIT Lab logo" fill className="object-contain p-1" />
             </span>
             <div>
               <p className="font-bold text-slate-950">{siteConfig.shortName}</p>

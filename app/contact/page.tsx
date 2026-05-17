@@ -17,7 +17,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Contact"
           title="Contact GAIT Lab"
-          description="Replace the placeholder email, address, social links, and map panel in /data/site.ts and this page when official details are available."
+          description="Reach out to GAIT Lab for research collaboration, student projects, and lab opportunities."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
@@ -62,15 +62,16 @@ export default function ContactPage() {
             </CardContent>
           </Card>
 
-          <div className="flex min-h-[360px] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center">
-            <div>
-              <MapPin className="mx-auto h-10 w-10 text-cyan-700" />
-              <h2 className="mt-4 text-xl font-semibold text-slate-950">Map placeholder</h2>
-              <p className="mt-2 max-w-md text-sm leading-6 text-slate-600">
-                Replace this panel with an embedded campus map, Google Maps iframe, or static location image when
-                the official address is available.
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+            <iframe
+              title="FAST NUCES Lahore map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5513466617244!2d74.30043917626048!3d31.481525749059074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903f08ebc7e8b%3A0x47e934f4cd34790!2sFAST%20NUCES%20Lahore!5e0!3m2!1sen!2s!4v1779058532453!5m2!1sen!2s"
+              className="h-[360px] w-full md:h-[450px]"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>

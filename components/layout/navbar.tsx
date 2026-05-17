@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -18,8 +19,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/90">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-10 w-10 items-center justify-center rounded-md bg-slate-900 text-sm font-bold text-white">
-            GA
+          <span className="relative h-10 w-10 overflow-hidden rounded-md bg-white ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-800">
+            <Image src="/images/lab-logo.png" alt="GAIT Lab logo" fill priority className="object-contain p-1" />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-bold text-slate-950">{siteConfig.shortName}</span>
