@@ -48,7 +48,7 @@ export function HomeHero() {
           className="relative"
         >
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-soft">
-            <Image src="/images/lab-hero.svg" alt="" fill priority className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
+            <Image src="/images/lab-hero.png" alt="" fill priority className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
           </div>
           <div className="absolute -bottom-5 left-5 right-5 grid grid-cols-3 gap-2 rounded-lg border border-slate-200 bg-white p-3 shadow-soft">
             {[
