@@ -117,5 +117,42 @@ export const projects: Project[] = [
       github: "https://github.com/moazzamumer/Adaptive-Air-Quality-Forcasting",
       paper: "https://arxiv.org/abs/2603.25495"
     }
+  },
+  {
+    title: "SONIC: Multimodal Mood Detection",
+    slug: "sonic-multimodal-mood-detection",
+    category: "Multimedia",
+    summary:
+      "A multimodal mood detection application that analyzes audio, images, and song lyrics, then recommends Spotify tracks matched to the detected emotional state.",
+    description:
+      "SONIC is a multimodal mood detection application that analyzes user-provided audio, images, and lyrics to identify emotional states and support personalized music discovery. The system connects detected moods to stored music labels and recommends matching songs through Spotify integration.\n\nFor image inputs, the backend classifies six moods: aggressive, calm, energetic, joyful, romantic, and sad. The application also includes dedicated pipelines for audio and lyric analysis, providing several ways for users to reach a mood-aware recommendation.\n\nThe project is delivered as a Python and Flask backend for model inference and service integration, paired with a cross-platform Flutter frontend for the user interface. It includes account flows, prediction views, recommendation screens, and Spotify connection support.",
+    image: "/images/projects/sonic-mood-detection.svg",
+    status: "Completed",
+    statusBadges: ["Student Project"],
+    tags: ["Multimodal AI", "Emotion Recognition", "Music Recommendation", "Computer Vision", "NLP"],
+    technologies: ["Python", "Flask", "Flutter", "Dart", "Spotify API", "Machine Learning"],
+    links: {
+      github: "https://github.com/ZemCS/SONIC"
+    }
+  },
+  {
+    title: "NephroScan: Kidney Anomaly Analysis",
+    slug: "nephroscan-kidney-anomaly-analysis",
+    category: "Medical Imaging",
+    summary:
+      "A deep learning clinical decision-support application for classifying kidney CT anomalies and segmenting tumor regions in both 2D scans and 3D NIfTI volumes.",
+    description:
+      "NephroScan is a deep learning system for automatic kidney anomaly classification and tumor segmentation from CT scans. It identifies Normal, Cyst, Stone, and Tumor cases, supports 2D image inputs and 3D NIfTI volumes, and presents results through a browser-based interface for clinical decision support.\n\nThe 2D classification pipeline evaluates VGG16, ResNet50, and a hybrid VGG16-ResNet50 classifier. For tumor cases, the system conditionally performs segmentation with DeepLabV3+ and UNet models to localize kidney and tumor regions.\n\nFor 3D scans, NephroScan adapts the 2D classifier through multi-view soft voting across axial and coronal slices, and uses a 2.5D DeepLabV3+ approach for volumetric tumor segmentation. The accompanying Flask application provides authentication, analysis history, confidence scores, and color-coded segmentation overlays. Results are intended to support, not replace, qualified radiologist review.",
+    image: "/images/projects/nephroscan-kidney-analysis.svg",
+    status: "Completed",
+    statusBadges: ["Student Project"],
+    tags: ["Kidney CT", "Tumor Segmentation", "Medical AI", "2D Classification", "3D Imaging"],
+    contributors: ["Eisha Shafiq", "Emaan Munib", "Fizza Zaitoon"],
+    datasets: ["Kidney CT dataset (Kaggle)", "KiTS23"],
+    technologies: ["Python", "PyTorch", "torchvision", "Flask", "SQLite", "VGG16", "ResNet50", "DeepLabV3+", "MobileNetV2", "UNet", "nibabel", "OpenCV"],
+    links: {
+      github: "https://github.com/Fizza-Awan/Kidney-Anomaly-Classification-and-Segmentation",
+      video: "https://github.com/Fizza-Awan/Kidney-Anomaly-Classification-and-Segmentation/blob/main/Final_Demo.mp4"
+    }
   }
 ];

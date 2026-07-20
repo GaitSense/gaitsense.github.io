@@ -2,11 +2,13 @@ export type TeamMember = {
   name: string;
   role: "Faculty" | "PhD Students" | "MS Students" | "FYP Students" | "Alumni";
   title: string;
+  bio?: string;
   interests: string[];
   image: string;
   // TODO: Replace placeholder profile links and emails with official details.
   email?: string;
   profileUrl?: string;
+  linkedinUrl?: string;
 };
 
 export const teamMembers: TeamMember[] = [
@@ -38,24 +40,21 @@ export const teamMembers: TeamMember[] = [
     profileUrl: "https://example.com/faculty/asma-naseer"
   },
   {
-    name: "Placeholder MS Student",
-    role: "MS Students",
-    title: "MS Researcher",
-    interests: ["Skin Lesion Segmentation", "Generative AI"],
-    image: "/images/person-placeholder.svg"
-  },
-  {
-    name: "Placeholder FYP Team",
-    role: "FYP Students",
-    title: "Final Year Project Group",
-    interests: ["Smart Agriculture", "Computer Vision"],
-    image: "/images/person-placeholder.svg"
-  },
-  {
-    name: "Placeholder Alumni",
+    name: "Muhammad Hassan",
     role: "Alumni",
-    title: "Former Research Student",
-    interests: ["Human Activity Recognition"],
-    image: "/images/person-placeholder.svg"
+    title: "Alumni Researcher",
+    bio: "ML Engineer at Orydex, working on biomarker-based prediction models for cancer research and healthcare AI.",
+    interests: ["Healthcare AI", "Medical Imaging", "Machine Learning"],
+    image: "/images/person-placeholder.svg",
+    linkedinUrl: "https://www.linkedin.com/in/muhammad-hassan-871523226/"
+  },
+  {
+    name: "Rehan Shafique",
+    role: "Alumni",
+    title: "Alumni Researcher",
+    bio: "AI-focused master's student at EPITECH Paris with experience in LLM evaluation, RAG pipelines, and agent systems.",
+    interests: ["LLM Evaluation", "RAG Systems", "Medical Imaging"],
+    image: "/images/person-placeholder.svg",
+    linkedinUrl: "https://www.linkedin.com/in/rehanshafique/"
   }
 ];

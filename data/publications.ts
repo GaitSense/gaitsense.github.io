@@ -31,7 +31,9 @@ export const publications: Publication[] = [
     authors: "Hassan, Muhammad, Rehan Shafique, and Asma Ahmad Farhan",
     venue: "Signal, Image and Video Processing 19, no. 8: 657",
     year: 2025,
-    category: "Journal"
+    category: "Journal",
+    doi: "10.1007/s11760-025-04175-8",
+    url: "https://doi.org/10.1007/s11760-025-04175-8"
   },
   {
     title: "Enhancing smartphone security with human centric bimodal fallback authentication leveraging sensors",

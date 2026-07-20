@@ -13,7 +13,7 @@ export default function ProjectsPage() {
         <SectionHeading
           eyebrow="Projects"
           title="Lab projects"
-          description="Browse current, completed, student, and placeholder project entries. Cards link to detail pages with galleries, videos, links, and related publication placeholders."
+          description="Browse current, completed, and student projects. Each entry includes a concise research overview, project resources, and related publications where available."
         />
         <div className="mt-10">
           <ProjectsFilter projects={projects} />

@@ -1,0 +1,11 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#081B3A"/>
+  <rect x="96" y="96" width="1408" height="708" rx="24" fill="#102D5F" stroke="#818CF8" stroke-opacity="0.45"/>
+  <rect x="472" y="188" width="656" height="520" rx="18" fill="#DDEBFF" fill-opacity="0.12" stroke="#67E8F9" stroke-width="3"/>
+  <path d="M727 298C625 275 544 348 560 452C575 552 653 626 737 595C784 577 774 525 747 490C716 451 731 424 760 405C794 383 787 312 727 298Z" fill="#60A5FA" fill-opacity="0.58" stroke="#BAE6FD" stroke-width="4"/>
+  <path d="M873 298C975 275 1056 348 1040 452C1025 552 947 626 863 595C816 577 826 525 853 490C884 451 869 424 840 405C806 383 813 312 873 298Z" fill="#60A5FA" fill-opacity="0.58" stroke="#BAE6FD" stroke-width="4"/>
+  <circle cx="903" cy="493" r="44" fill="#FB7185" fill-opacity="0.9" stroke="#FFE4E6" stroke-width="4"/>
+  <path d="M268 450H412M1188 450H1332" stroke="#22D3EE" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="268" cy="450" r="20" fill="#22D3EE"/><circle cx="1332" cy="450" r="20" fill="#818CF8"/>
+  <text x="800" y="840" fill="#CFFAFE" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="3">NEPHROSCAN / KIDNEY CT ANALYSIS</text>
+</svg>

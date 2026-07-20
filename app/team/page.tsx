@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Mail } from "lucide-react";
+import { ExternalLink, Linkedin, Mail } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +21,7 @@ export default function TeamPage() {
         <SectionHeading
           eyebrow="Team"
           title="People at GAIT Lab"
-          description="Faculty entries use supplied names. Student and alumni rows are placeholders until names, photos, topics, and profile links are available."
+          description="Faculty, student, and alumni researchers contributing to applied work in AI, imaging, and intelligent sensing."
         />
 
         <div className="mt-10 space-y-12">
@@ -42,6 +42,7 @@ export default function TeamPage() {
                         <div className="p-6">
                           <h3 className="text-xl font-semibold text-slate-950">{member.name}</h3>
                           <p className="mt-1 text-sm font-medium text-cyan-700">{member.title}</p>
+                          {member.bio ? <p className="mt-3 text-sm leading-6 text-slate-600">{member.bio}</p> : null}
                           <div className="mt-4 flex flex-wrap gap-2">
                             {member.interests.map((interest) => (
                               <Badge key={interest} variant="outline">
@@ -63,6 +64,14 @@ export default function TeamPage() {
                                 <Link href={member.profileUrl}>
                                   <ExternalLink className="h-4 w-4" />
                                   Profile
+                                </Link>
+                              </Button>
+                            ) : null}
+                            {member.linkedinUrl ? (
+                              <Button asChild size="sm" variant="outline">
+                                <Link href={member.linkedinUrl}>
+                                  <Linkedin className="h-4 w-4" />
+                                  LinkedIn
                                 </Link>
                               </Button>
                             ) : null}

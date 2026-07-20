@@ -16,17 +16,7 @@ export default function HomePage() {
       domain.title
     )
   );
-  const featuredProjects = projects
-    .filter((project) =>
-      [
-        "medical-image-augmentation-gan",
-        "automated-cobb-angle-estimation",
-        "occupancy-detection-thermal-sensors",
-        "retrieval-augmented-fashion-captioning-hashtag-generation"
-      ].includes(project.slug)
-    )
-    .slice(0, 3);
-  const projectHighlights = featuredProjects.length ? featuredProjects : projects.slice(0, 3);
+  const projectHighlights = projects.slice(0, 3);
   return (
     <>
       <HomeHero />
