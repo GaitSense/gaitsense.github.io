@@ -1,0 +1,13 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#071A3D"/>
+  <rect x="96" y="96" width="1408" height="708" rx="24" fill="#102D5F" stroke="#818CF8" stroke-opacity="0.4"/>
+  <rect x="250" y="350" width="308" height="200" rx="20" fill="#0E7490" fill-opacity="0.34" stroke="#67E8F9" stroke-width="3"/>
+  <path d="M292 454H338L366 404L398 503L430 368L462 454H516" stroke="#CFFAFE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M558 450H668M932 450H1042" stroke="#67E8F9" stroke-width="5" stroke-linecap="round"/>
+  <rect x="668" y="292" width="264" height="316" rx="22" fill="#3730A3" fill-opacity="0.55" stroke="#A5B4FC" stroke-width="4"/>
+  <circle cx="734" cy="370" r="18" fill="#A5B4FC"/><circle cx="800" cy="370" r="18" fill="#67E8F9"/><circle cx="866" cy="370" r="18" fill="#A5B4FC"/>
+  <path d="M720 440H880M720 492H846M720 544H864" stroke="#E0E7FF" stroke-width="10" stroke-linecap="round"/>
+  <rect x="1042" y="350" width="308" height="200" rx="20" fill="#0E7490" fill-opacity="0.34" stroke="#67E8F9" stroke-width="3"/>
+  <path d="M1100 500V400M1160 500V370M1220 500V420M1280 500V388" stroke="#CFFAFE" stroke-width="16" stroke-linecap="round"/>
+  <text x="800" y="840" fill="#CFFAFE" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="3">FROZEN LLMS / CROSS-DOMAIN HUMAN ACTIVITY RECOGNITION</text>
+</svg>

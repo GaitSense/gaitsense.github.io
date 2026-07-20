@@ -154,5 +154,41 @@ export const projects: Project[] = [
       github: "https://github.com/Fizza-Awan/Kidney-Anomaly-Classification-and-Segmentation",
       video: "https://github.com/Fizza-Awan/Kidney-Anomaly-Classification-and-Segmentation/blob/main/Final_Demo.mp4"
     }
+  },
+  {
+    title: "Cross-Attention Vocal Activity Recognition",
+    slug: "cross-attention-vocal-activity-recognition",
+    category: "IoT and Smart Sensing",
+    summary:
+      "A multimodal earbud-based vocal activity recognition model that fuses audio and inertial sensor signals through bidirectional cross-attention.",
+    description:
+      "This project advances vocal activity recognition with earbuds by replacing the concatenation-based EarVAS fusion baseline with bidirectional cross-attention between audio and IMU features. The approach is designed to better separate acoustically similar activities, including Blow Nose and Sniff or Cough and Throat Clear.\n\nThe model uses an EfficientNet-B0 audio encoder over bi-channel log-mel spectrograms and a 1D CNN IMU encoder over six-axis sensor data. Its bidirectional cross-attention fusion learns interactions between the two modalities, while focal loss handles substantial class imbalance.\n\nEvaluated on EarSAVAS, a 160,611-sample dataset spanning nine classes and 42 users, the cross-attention model achieved 94.99% accuracy and 0.723 macro F1. The repository also includes lightweight model variants, distillation, pruning, INT8 quantization, and ONNX export pathways for on-earbud deployment.",
+    image: "/images/projects/crossattn-vocal-recognition.svg",
+    status: "Completed",
+    statusBadges: ["Student Project"],
+    tags: ["Vocal Activity Recognition", "Wearable AI", "Audio", "IMU", "Cross-Attention", "Edge AI"],
+    datasets: ["EarSAVAS"],
+    technologies: ["Python", "PyTorch", "torchaudio", "EfficientNet-B0", "Hydra", "librosa", "ONNX Runtime", "Scikit-learn"],
+    links: {
+      github: "https://github.com/Menaal23/CrossAttn-VAR"
+    }
+  },
+  {
+    title: "Cross-Domain HAR with Frozen LLMs",
+    slug: "cross-domain-har-frozen-llms",
+    category: "IoT and Smart Sensing",
+    summary:
+      "A cross-domain human activity recognition framework that adapts wearable IMU signals to frozen LLM representations with minimal trainable parameters.",
+    description:
+      "This project investigates whether frozen large language model backbones can generalize human activity recognition features across different wearable-sensor datasets without retraining the main transformer weights. The pipeline transforms six-channel accelerometer and gyroscope windows into position-augmented patch tokens for the LLM representation space.\n\nThe approach combines sensor-specific normalization, Conv1D patch embedding, learnable positional encoding, gated cross-attention reprogramming with activity prototypes, and a two-stage training process for sensor alignment and activity classification. Only LayerNorm parameters are fine-tuned, while the LLM backbone is proportionally truncated to retain more transferable shallow layers.\n\nExperiments cover 12 cross-domain transfer pairs across UCI HAR, Shoaib, MotionSense, and HHAR. The strongest reported configuration, Qwen-1.5B with two-stage training, reached 81.55% accuracy and 74.48% macro F1, improving macro F1 by 3.06 percentage points over the cited LLM4HAR baseline.",
+    image: "/images/projects/llm-har.svg",
+    status: "Completed",
+    statusBadges: ["Student Project"],
+    tags: ["Human Activity Recognition", "Large Language Models", "Wearable Sensing", "Cross-Domain Learning", "IMU", "Transfer Learning"],
+    datasets: ["UCI HAR", "Shoaib", "MotionSense", "HHAR"],
+    technologies: ["Python", "PyTorch", "Transformers", "Hugging Face", "Conv1D", "Qwen", "Llama", "Scikit-learn"],
+    links: {
+      github: "https://github.com/Shehroz-Mir/llm-har"
+    }
   }
 ];

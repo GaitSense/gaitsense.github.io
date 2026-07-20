@@ -1,0 +1,12 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#071A3D"/>
+  <rect x="96" y="96" width="1408" height="708" rx="24" fill="#102D5F" stroke="#22D3EE" stroke-opacity="0.35"/>
+  <rect x="262" y="292" width="300" height="316" rx="26" fill="#0E7490" fill-opacity="0.36" stroke="#67E8F9" stroke-width="3"/>
+  <rect x="1038" y="292" width="300" height="316" rx="26" fill="#4338CA" fill-opacity="0.34" stroke="#A5B4FC" stroke-width="3"/>
+  <path d="M314 456C345 360 375 550 406 456C437 360 467 550 498 456" stroke="#CFFAFE" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1090 412L1150 358L1210 520L1270 390" stroke="#C7D2FE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M562 450H704M896 450H1038" stroke="#67E8F9" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="800" cy="450" r="102" fill="#164E9A" stroke="#22D3EE" stroke-width="4"/>
+  <path d="M746 420C782 385 825 385 854 420M746 480C782 515 825 515 854 480" stroke="#CFFAFE" stroke-width="7" stroke-linecap="round"/>
+  <text x="800" y="840" fill="#CFFAFE" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="3">CROSS-ATTENTION / VOCAL ACTIVITY RECOGNITION</text>
+</svg>
