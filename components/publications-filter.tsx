@@ -22,11 +22,13 @@ export function PublicationsFilter({ publications }: PublicationsFilterProps) {
   const [year, setYear] = useState<string | number>("All");
   const [category, setCategory] = useState("All");
 
-  const filtered = publications.filter((item) => {
-    const matchesYear = year === "All" || item.year === year;
-    const matchesCategory = category === "All" || item.category === category;
-    return matchesYear && matchesCategory;
-  });
+  const filtered = publications
+    .filter((item) => {
+      const matchesYear = year === "All" || item.year === year;
+      const matchesCategory = category === "All" || item.category === category;
+      return matchesYear && matchesCategory;
+    })
+    .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
   return (
     <div>

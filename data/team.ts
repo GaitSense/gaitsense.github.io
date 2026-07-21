@@ -20,7 +20,8 @@ export const teamMembers: TeamMember[] = [
     interests: ["Medical Imaging", "Smart Sensing", "Deep Learning"],
     image: "/images/team/asma-ahmad.png",
     email: "asma.ahmad@nu.edu.pk",
-    profileUrl: "https://lhr.nu.edu.pk/fsc/facultyProfile/4335"
+    profileUrl: "https://lhr.nu.edu.pk/fsc/facultyProfile/4335",
+    scholarUrl: "https://scholar.google.com/citations?hl=en&user=UYiZXUIAAAAJ"
   },
   {
     name: "Hamad Ul Qudous",

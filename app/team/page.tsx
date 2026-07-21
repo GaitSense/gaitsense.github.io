@@ -42,7 +42,7 @@ export default function TeamPage() {
                               src={member.image}
                               alt={`Portrait of ${member.name}`}
                               fill
-                              className="object-cover"
+                              className="object-cover object-top"
                               sizes="(min-width: 1024px) 25vw, 100vw"
                             />
                           </div>
