@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Linkedin, Mail } from "lucide-react";
+import { ExternalLink, GraduationCap, Linkedin, Mail } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +12,7 @@ export const metadata = {
   title: "Team"
 };
 
-const roles: TeamMember["role"][] = ["Faculty", "PhD Students", "MS Students", "FYP Students", "Alumni"];
+const roles: TeamMember["role"][] = ["Current Members", "Alumni"];
 
 export default function TeamPage() {
   return (
@@ -21,7 +21,7 @@ export default function TeamPage() {
         <SectionHeading
           eyebrow="Team"
           title="People at GAIT Lab"
-          description="Faculty, student, and alumni researchers contributing to applied work in AI, imaging, and intelligent sensing."
+          description="Researchers and alumni contributing to applied work in AI, imaging, and intelligent sensing."
         />
 
         <div className="mt-10 space-y-12">
@@ -36,9 +36,26 @@ export default function TeamPage() {
                   {members.map((member) => (
                     <Card key={`${member.role}-${member.name}`} className="overflow-hidden">
                       <CardContent className="p-0">
-                        <div className="relative aspect-[4/3] bg-slate-100">
-                          <Image src={member.image} alt="" fill className="object-cover" sizes="(min-width: 1024px) 25vw, 100vw" />
-                        </div>
+                        {member.image ? (
+                          <div className="relative aspect-[4/3] bg-slate-100">
+                            <Image
+                              src={member.image}
+                              alt={`Portrait of ${member.name}`}
+                              fill
+                              className="object-cover"
+                              sizes="(min-width: 1024px) 25vw, 100vw"
+                            />
+                          </div>
+                        ) : (
+                          <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-cyan-800 to-indigo-900 text-5xl font-semibold text-white">
+                            {member.name
+                              .split(" ")
+                              .filter((part) => !["Dr.", "Mr.", "Ms."].includes(part))
+                              .slice(0, 2)
+                              .map((part) => part[0])
+                              .join("")}
+                          </div>
+                        )}
                         <div className="p-6">
                           <h3 className="text-xl font-semibold text-slate-950">{member.name}</h3>
                           <p className="mt-1 text-sm font-medium text-cyan-700">{member.title}</p>
@@ -64,6 +81,14 @@ export default function TeamPage() {
                                 <Link href={member.profileUrl}>
                                   <ExternalLink className="h-4 w-4" />
                                   Profile
+                                </Link>
+                              </Button>
+                            ) : null}
+                            {member.scholarUrl ? (
+                              <Button asChild size="sm" variant="outline">
+                                <Link href={member.scholarUrl}>
+                                  <GraduationCap className="h-4 w-4" />
+                                  Scholar
                                 </Link>
                               </Button>
                             ) : null}
