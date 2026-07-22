@@ -48,6 +48,7 @@ export const teamMembers: TeamMember[] = [
     title: "Research Assistant, FAST-NUCES Lahore",
     interests: ["Generative AI", "Time Series Analysis", "Applied AI"],
     image: "/images/team/moazzam-umer.png",
+    email: "moazzamumar22@gmail.com",
     profileUrl: "https://moazzamumer.github.io/",
     scholarUrl: "https://scholar.google.com/citations?hl=en&user=o3AbkR8AAAAJ"
   },

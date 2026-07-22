@@ -37,7 +37,7 @@ export default function TeamPage() {
                     <Card key={`${member.role}-${member.name}`} className="overflow-hidden">
                       <CardContent className="p-0">
                         {member.image ? (
-                          <div className="relative aspect-[5/4] bg-slate-100">
+                          <div className="relative aspect-[6/5] bg-slate-100">
                             <Image
                               src={member.image}
                               alt={`Portrait of ${member.name}`}
@@ -47,7 +47,7 @@ export default function TeamPage() {
                             />
                           </div>
                         ) : (
-                          <div className="flex aspect-[5/4] items-center justify-center bg-gradient-to-br from-cyan-800 to-indigo-900 text-5xl font-semibold text-white">
+                          <div className="flex aspect-[6/5] items-center justify-center bg-gradient-to-br from-cyan-800 to-indigo-900 text-5xl font-semibold text-white">
                             {member.name
                               .split(" ")
                               .filter((part) => !["Dr.", "Mr.", "Ms."].includes(part))
