@@ -15,7 +15,6 @@ export type ProjectStatus =
   | "Exploratory"
   | "Funded"
   | "Student Project"
-  | "Placeholder"
   | "Submitted"
   | "Preprint";
 

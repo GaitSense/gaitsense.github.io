@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Mail, MapPin } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
@@ -50,12 +50,6 @@ export default function ContactPage() {
                   <Link href={siteConfig.links.github}>
                     <Github className="h-4 w-4" />
                     GitHub
-                  </Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href={siteConfig.links.linkedin}>
-                    <Linkedin className="h-4 w-4" />
-                    LinkedIn
                   </Link>
                 </Button>
               </div>

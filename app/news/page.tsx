@@ -16,7 +16,7 @@ export default function NewsPage() {
         <SectionHeading
           eyebrow="News"
           title="Lab updates"
-          description="Use /data/news.ts for dated lab announcements, publications, student milestones, events, and project demos."
+          description="Recent publications, research milestones, and updates from GAIT Lab."
         />
         <div className="mt-10 grid gap-4">
           {newsItems.map((item) => (

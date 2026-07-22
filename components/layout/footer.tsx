@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Mail, MapPin } from "lucide-react";
 
 import { siteConfig } from "@/data/site";
 
@@ -39,20 +39,13 @@ export function Footer() {
               <Link href={siteConfig.links.github} aria-label="GitHub" className="rounded-md border p-2 hover:bg-slate-50">
                 <Github className="h-4 w-4" />
               </Link>
-              <Link
-                href={siteConfig.links.linkedin}
-                aria-label="LinkedIn"
-                className="rounded-md border p-2 hover:bg-slate-50"
-              >
-                <Linkedin className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         </div>
       </div>
       <div className="border-t border-slate-200 py-4">
         <div className="container text-sm text-slate-500">
-          © {new Date().getFullYear()} {siteConfig.labName}. Placeholder site content is editable in /data.
+          © {new Date().getFullYear()} {siteConfig.labName}.
         </div>
       </div>
     </footer>

@@ -29,19 +29,11 @@ export const publications: Publication[] = [
   {
     title: "Automated Cobb's angle measurement for scoliosis diagnosis using deep learning techniques",
     authors: "Asbah Khalid, Asma Ahmad Farhan, Kashif Zafar, and Maria Tamoor",
-    venue: "Intelligent Data Analysis 30, no. 3: 694",
-    year: 2026,
+    venue: "Intelligent Data Analysis 30, no. 3",
+    year: 2025,
     category: "Journal",
     doi: "10.1177/1088467X251358150",
     url: "https://doi.org/10.1177/1088467X251358150"
-  },
-  {
-    title: "Beyond the Hype: Comparing Lightweight and Deep Learning Models for Air Quality Forecasting",
-    authors: "Moazzam Umer Gondal, Hamad ul Qudous, and Asma Ahmad Farhan",
-    venue: "arXiv preprint arXiv:2512.09076",
-    year: 2025,
-    category: "Preprint",
-    url: "https://arxiv.org/abs/2512.09076"
   },
   {
     title: "From Pixels to Posts: Retrieval-Augmented Fashion Captioning and Hashtag Generation",
@@ -99,7 +91,7 @@ export const publications: Publication[] = [
   {
     title: "Fuzzy knowledge based intelligent decision support system for ground based air defence",
     authors: "Adnan Ahmad, Rawan Amjad, Amna Basharat, Asma Ahmad Farhan, and Ali Ezad Abbas",
-    venue: "Journal of Ambient Intelligence and Humanized Computing 15, no. 4: 2317",
+    venue: "Journal of Ambient Intelligence and Humanized Computing 15, no. 4: 2317-2340",
     year: 2024,
     category: "Journal",
     doi: "10.1007/s12652-024-04757-3",
@@ -108,7 +100,7 @@ export const publications: Publication[] = [
   {
     title: "Recent progress in sign language recognition: a review",
     authors: "Aamir Wali, Roha Shariq, Sajdah Shoaib, Sukhan Amir, and Asma Ahmad Farhan",
-    venue: "Machine Vision and Applications 34, no. 6",
+    venue: "Machine Vision and Applications 34, 127",
     year: 2023,
     category: "Review",
     doi: "10.1007/s00138-023-01479-y",

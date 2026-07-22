@@ -118,7 +118,7 @@ export default function HomePage() {
                 <p className="text-sm font-semibold uppercase tracking-wider text-cyan-300">Join GAIT Lab</p>
                 <h2 className="mt-3 text-2xl font-bold tracking-normal md:text-3xl">Looking for a thesis, FYP, or collaboration?</h2>
                 <p className="mt-3 max-w-3xl leading-7 text-slate-300">
-                  Openings are listed as editable placeholders until current topics and deadlines are finalized.
+                  Connect with the lab to discuss research interests, project ideas, and potential collaboration.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row md:flex-col">

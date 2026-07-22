@@ -6,9 +6,18 @@ import { motion } from "framer-motion";
 import { ArrowRight, FlaskConical } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { projects } from "@/data/projects";
+import { publications } from "@/data/publications";
+import { researchDomains } from "@/data/research";
 import { siteConfig } from "@/data/site";
 
 export function HomeHero() {
+  const stats = [
+    [String(researchDomains.length), "Domains"],
+    [String(projects.length), "Projects"],
+    [String(publications.length), "Publications"]
+  ];
+
   return (
     <section className="relative overflow-hidden bg-mesh-grid bg-[length:42px_42px]">
       <div className="container grid min-h-[calc(100vh-4rem)] items-center gap-10 py-16 lg:grid-cols-[1fr_0.9fr] lg:py-20">
@@ -51,11 +60,7 @@ export function HomeHero() {
             <Image src="/images/lab-hero.png" alt="" fill priority className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
           </div>
           <div className="absolute -bottom-5 left-5 right-5 grid grid-cols-3 gap-2 rounded-lg border border-slate-200 bg-white p-3 shadow-soft">
-            {[
-              ["8", "Domains"],
-              ["15", "Projects"],
-              ["7", "Selected papers"]
-            ].map(([value, label]) => (
+            {stats.map(([value, label]) => (
               <div key={label} className="rounded-md bg-slate-50 p-3 text-center">
                 <div className="text-2xl font-bold text-slate-950">{value}</div>
                 <div className="text-xs font-medium text-slate-500">{label}</div>

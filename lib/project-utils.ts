@@ -6,10 +6,6 @@ export function getProjectStatusBadges(project: Project) {
   badges.add(project.status);
   project.statusBadges?.forEach((badge) => badges.add(badge));
 
-  if (project.description.toLowerCase().includes("placeholder")) {
-    badges.add("Placeholder");
-  }
-
   if (!badges.has("Funded")) {
     badges.add("Student Project");
   }

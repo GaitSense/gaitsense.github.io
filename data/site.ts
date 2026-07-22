@@ -8,11 +8,8 @@ export const siteConfig = {
     "The Generative AI, Imaging & IoT Lab, or GAIT Lab, is a research group focused on advancing intelligent systems across generative artificial intelligence, medical imaging, digital image processing, Internet of Things, smart sensing, machine learning, and deep learning. The lab provides students with a platform to conduct research for master’s theses, Final Year Projects, and applied AI projects. Current research includes medical image analysis, human activity recognition, energy forecasting, EEG and ECG classification, NLP, time series analysis, smartphone authentication, and generative AI for healthcare and multimedia applications.",
   email: "asma.ahmad@nu.edu.pk",
   address: "School of Computing, FAST NUCES Lahore, Pakistan",
-  // TODO: Replace with official social and repository links.
   links: {
-    github: "https://github.com/placeholder-gait-lab",
-    linkedin: "https://www.linkedin.com/company/placeholder-gait-lab",
-    scholar: "https://scholar.google.com/citations?user=placeholder"
+    github: "https://github.com/GaitSense"
   }
 };
 
